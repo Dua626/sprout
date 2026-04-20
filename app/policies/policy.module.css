@@ -1,0 +1,128 @@
+/* ── POLICY PAGE HERO ── */
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) 0 64px;
+  background: var(--olive-deep);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,162,39,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pageHero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--cream);
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.pageHero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.pageHero p {
+  font-size: 13px;
+  color: rgba(250, 250, 245, 0.4);
+  letter-spacing: 0.06em;
+  position: relative;
+}
+
+/* ── CONTENT ── */
+.content {
+  padding: 80px 0 100px;
+  background: var(--cream);
+}
+
+.contentInner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  margin-bottom: 52px;
+}
+
+.section h2 {
+  font-size: 22px;
+  color: var(--olive-deep);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--cream-deep);
+}
+
+.section p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+
+.section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.section ul li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding-left: 18px;
+  position: relative;
+}
+
+.section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.highlight {
+  background: var(--cream-warm);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 20px 24px;
+  margin: 20px 0;
+}
+
+.highlight p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 48px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive);
+  transition: color var(--transition), gap var(--transition);
+}
+
+.backLink:hover {
+  color: var(--gold);
+  gap: 14px;
+}
+
+@media (max-width: 560px) {
+  .contentInner { padding: 0 20px; }
+}

@@ -1,181 +1,182 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
+import {
+  IconHealthcare, IconHospitality, IconEducation,
+  IconFabric, IconCustomize, IconBulk, IconDelivery,
+} from './components/Icons';
 
-const featuredProducts = [
-  { id: 1, name: 'Linen Ease Top', category: 'Tops', price: '$68', tag: 'New', img: '/images/products/1.png' },
-  { id: 2, name: 'Meadow Wrap Skirt', category: 'Bottoms', price: '$84', tag: 'Bestseller', img: '/images/products/2.png' },
-  { id: 3, name: 'Cloud Knit Cardigan', category: 'Outerwear', price: '$112', tag: 'New', img: '/images/products/3.jpg' },
+const industries = [
+  { Icon: IconHealthcare, title: 'Healthcare',   items: ['Lab Coats', 'Patient Gowns', 'Hospital Bed Linen'] },
+  { Icon: IconHospitality, title: 'Hospitality', items: ['Hotel Staff Uniforms', 'Housekeeping Uniforms', 'Bed Linen & Covers'] },
+  { Icon: IconEducation,  title: 'Education',    items: ['School Uniforms', 'Custom Colours & Piping', 'Bulk Orders'] },
+];
+
+const whySprout = [
+  { Icon: IconFabric,    title: 'Quality Fabrics',      desc: 'Durable, comfortable fabrics suited to each sector.' },
+  { Icon: IconCustomize, title: 'Full Customization',   desc: 'Your brand colours, logo, piping, and cut — every detail.' },
+  { Icon: IconBulk,      title: 'Bulk Ready',           desc: 'Built for institutional scale without compromising quality.' },
+  { Icon: IconDelivery,  title: 'On-Time Delivery',     desc: 'Deadlines are commitments, not suggestions.' },
+];
+
+const process = [
+  { step: '01', title: 'Consultation',       desc: 'We understand your sector, quantities, and brand identity.' },
+  { step: '02', title: 'Fabric & Design',    desc: 'We propose fabric options, colours, and design specs.' },
+  { step: '03', title: 'Sampling',           desc: 'A physical sample is produced for your approval.' },
+  { step: '04', title: 'Production',         desc: 'Full production with quality checks, on schedule.' },
 ];
 
 const testimonials = [
   {
-    quote: "Sprout changed how I think about getting dressed. Every piece is effortless and feels like a second skin.",
-    author: "Mia L.",
-    title: "Customer since 2023",
-    initial: "M",
+    quote: 'Sprout delivered our school uniform programme on time and exactly to specification. The quality exceeded what we\'d seen from previous suppliers.',
+    author: 'SOS Hermann Gmeiner School',
+    location: 'Lahore, Pakistan',
+    initial: 'S',
   },
   {
-    quote: "The quality is stunning for the price. I wore the Cloud Cardigan on a flight and got three compliments.",
-    author: "Sophie R.",
-    title: "Verified Buyer",
-    initial: "S",
-  },
-  {
-    quote: "Finally a brand that understands soft color and thoughtful tailoring. I'm obsessed.",
-    author: "Anika T.",
-    title: "Loyal Customer",
-    initial: "A",
+    quote: 'A professional team that truly understands bulk workwear. Communication was clear throughout and the final product was outstanding.',
+    author: 'Trade Tacts International',
+    location: 'Lahore, Pakistan',
+    initial: 'T',
   },
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* HERO */}
+      {/* ── HERO ── */}
       <section className={styles.hero}>
         <div className={styles.heroLeft}>
           <p className={`${styles.heroLabel} section-label fade-up`}>
-            New Collection — Spring 2025
+            B2B Uniform Solutions — Lahore, Pakistan
           </p>
           <h1 className={`${styles.heroTitle} fade-up fade-up-delay-1`}>
-            Dressed in<br /><em>quiet beauty</em>
+            Uniform &amp; Linen Solutions<br />
+            <em>for Every Sector</em>
           </h1>
           <p className={`${styles.heroSub} fade-up fade-up-delay-2`}>
-            Sprout creates soft, minimal clothing rooted in natural textures and honest design. 
-            Pieces you reach for again and again.
+            We don&rsquo;t just stitch uniforms — we design confidence, identity, and functionality for your workforce.
           </p>
           <div className={`${styles.heroActions} fade-up fade-up-delay-3`}>
-            <Link href="/products" className={styles.btnPrimary}>
-              Explore Collection
-            </Link>
-            <Link href="/about" className={styles.btnGhost}>
-              Our Story
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
+            <Link href="/contact" className={styles.btnGold}>Get a Free Quote</Link>
+            <Link href="/projects" className={styles.btnOutline}>View Our Work</Link>
           </div>
         </div>
 
         <div className={styles.heroRight}>
           <Image
             src="/images/hero.png"
-            alt="Sprout Spring Collection"
+            alt="Sprout uniform solutions"
             fill
             priority
             style={{ objectFit: 'cover', objectPosition: 'center top' }}
           />
           <div className={styles.heroBadge}>
-            <span>New arrivals</span>
-            <strong>Spring '25</strong>
+            <span>Serving since</span>
+            <strong>2022</strong>
           </div>
         </div>
       </section>
 
-      {/* MARQUEE */}
-      <div className={styles.marqueeWrap}>
-        <div className={styles.marqueeTrack}>
-          {[...Array(2)].map((_, i) => (
-            <span key={i} style={{display:'flex', alignItems:'center', gap:'0'}}>
-              <span>Free Shipping Over $120</span>
-              <span className={styles.dot}>&nbsp;·&nbsp;</span>
-              <span>Ethically Sourced Fabrics</span>
-              <span className={styles.dot}>&nbsp;·&nbsp;</span>
-              <span>Slow Fashion, Always</span>
-              <span className={styles.dot}>&nbsp;·&nbsp;</span>
-              <span>New Arrivals Every Season</span>
-              <span className={styles.dot}>&nbsp;·&nbsp;</span>
-              <span>Carbon-Neutral Shipping</span>
-              <span className={styles.dot}>&nbsp;·&nbsp;</span>
-            </span>
+      {/* ── STATS STRIP ── */}
+      <div className={styles.statsStrip}>
+        <div className={`container ${styles.statsInner}`}>
+          {[
+            { value: '3+',   label: 'Sectors Served' },
+            { value: '500+', label: 'Uniforms Delivered' },
+            { value: '100%', label: 'Custom Made' },
+            { value: '3',    label: 'Clients & Growing' },
+          ].map((s) => (
+            <div key={s.label} className={styles.stat}>
+              <span className={styles.statValue}>{s.value}</span>
+              <span className={styles.statLabel}>{s.label}</span>
+            </div>
           ))}
         </div>
       </div>
 
-      {/* ABOUT PREVIEW */}
-      <section className={styles.aboutSection} style={{padding:'120px 0'}}>
-        <div className="container" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'center'}}>
-          <div className={styles.aboutImgWrap}>
-            <div className={styles.aboutImgInner}>
-              <Image
-                src="/images/about.png"
-                alt="Sprout — our story"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-              />
-            </div>
-            <div className={styles.aboutAccent}></div>
-          </div>
-
-          <div className={styles.aboutContent}>
-            <p className="section-label" style={{marginBottom:'24px'}}>Our Philosophy</p>
-            <h2>Rooted in <em>nature</em>,<br />made to last</h2>
-            <p>We believe clothing should be honest — honest in its materials, its making, and its intention. Every Sprout piece is designed with slowness in mind.</p>
-            <p>No fast trends. No synthetic shortcuts. Just beautiful, breathable fabrics cut to move with you through seasons, years, and every version of yourself.</p>
-            <Link href="/about" className={styles.aboutLink}>
-              Read our story →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURED PRODUCTS */}
-      <section className={styles.productsSection}>
+      {/* ── INDUSTRIES ── */}
+      <section className={styles.industriesSection}>
         <div className="container">
           <div className={styles.sectionHead}>
-            <div>
-              <p className="section-label">The Collection</p>
-              <h2>Current <em>favourites</em></h2>
-            </div>
-            <Link href="/products" className={styles.viewAll}>View all →</Link>
+            <p className="section-label">What We Cover</p>
+            <h2>Industries <em>We Serve</em></h2>
           </div>
-
-          <div className={styles.productGrid}>
-            {featuredProducts.map((product) => (
-              <Link href="/products" key={product.id} className={styles.productCard}>
-                <div className={styles.cardImgWrap}>
-                  <Image
-                    src={product.img}
-                    alt={product.name}
-                    fill
-                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
-                  />
-                  {product.tag && (
-                    <span className={styles.cardTag}>{product.tag}</span>
-                  )}
-                </div>
-                <div className={styles.cardBody}>
-                  <h3 className={styles.cardName}>{product.name}</h3>
-                  <div className={styles.cardMeta}>
-                    <span className={styles.cardCategory}>{product.category}</span>
-                    <span className={styles.cardPrice}>{product.price}</span>
-                  </div>
-                </div>
-              </Link>
+          <div className={styles.industriesGrid}>
+            {industries.map(({ Icon, title, items }) => (
+              <div key={title} className={styles.industryCard}>
+                <span className={styles.industryIcon}><Icon /></span>
+                <h3>{title}</h3>
+                <ul className={styles.industryItems}>
+                  {items.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+                <Link href="/services" className={styles.industryLink}>View Services →</Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* ── WHY SPROUT ── */}
+      <section
+        className={styles.whySection}
+        style={{ backgroundImage: 'url(/images/bg/home-why.png)' }}
+      >
+        <div className={styles.whyOverlay} />
+        <div className={`container ${styles.whyInner}`}>
+          <div className={styles.sectionHead} style={{ textAlign: 'center', justifyContent: 'center', flexDirection: 'column', gap: '12px', alignItems: 'center' }}>
+            <p className="section-label">Our Promise</p>
+            <h2>Why Choose <em>Sprout</em></h2>
+          </div>
+          <div className={styles.whyGrid}>
+            {whySprout.map(({ Icon, title, desc }) => (
+              <div key={title} className={styles.whyCard}>
+                <span className={styles.whyIcon}><Icon /></span>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── PROCESS ── */}
+      <section className={styles.processSection}>
+        <div className="container">
+          <div className={styles.sectionHead} style={{ flexDirection: 'column', gap: '12px' }}>
+            <p className="section-label">How It Works</p>
+            <h2>Our <em>Process</em></h2>
+          </div>
+          <div className={styles.processGrid}>
+            {process.map((p, i) => (
+              <div key={p.step} className={styles.processCard}>
+                <span className={styles.processStep}>{p.step}</span>
+                {i < process.length - 1 && <span className={styles.processArrow}>→</span>}
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ── */}
       <section className={styles.testimonialsSection}>
         <div className="container">
           <div className={styles.testimonialsHead}>
-            <p className="section-label" style={{justifyContent:'center'}}>Testimonials</p>
-            <h2 style={{marginTop:'16px'}}>Loved by <em>real people</em></h2>
+            <p className="section-label" style={{ justifyContent: 'center' }}>Client Feedback</p>
+            <h2 style={{ marginTop: '16px' }}>Trusted by <em>Real Clients</em></h2>
           </div>
-
           <div className={styles.testimonialGrid}>
             {testimonials.map((t, i) => (
               <div key={i} className={styles.testimonialCard}>
-                <div className={styles.stars}>★★★★★</div>
-                <blockquote>"{t.quote}"</blockquote>
+                <div className={styles.quoteIcon}>&ldquo;</div>
+                <blockquote>{t.quote}</blockquote>
                 <div className={styles.testimonialAuthor}>
                   <div className={styles.authorAvatar}>{t.initial}</div>
                   <div>
                     <span className={styles.authorName}>{t.author}</span>
-                    <span className={styles.authorTitle}>{t.title}</span>
+                    <span className={styles.authorLocation}>{t.location}</span>
                   </div>
                 </div>
               </div>
@@ -184,17 +185,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.ctaSection}>
-        <div className="container">
-          <p className="section-label" style={{justifyContent:'center', color:'var(--sage)', marginBottom:'24px'}}>
-            Get in Touch
+      {/* ── CTA BANNER ── */}
+      <section
+        className={styles.ctaSection}
+        style={{ backgroundImage: 'url(/images/bg/home-cta.png)' }}
+      >
+        <div className={styles.ctaOverlay} />
+        <div className={`container ${styles.ctaInner}`}>
+          <p className="section-label" style={{ justifyContent: 'center', color: 'var(--gold-muted)', marginBottom: '24px' }}>
+            Ready to Work Together?
           </p>
-          <h2>Ready to <em>grow</em><br />your wardrobe?</h2>
-          <p>Explore our current collection or reach out with questions. We're a small team that truly cares.</p>
+          <h2>Let&rsquo;s outfit <em>your team</em></h2>
+          <p>Whether you need 50 uniforms or 5,000 — Sprout is built for your scale.</p>
           <div className={styles.ctaActions}>
-            <Link href="/products" className={styles.btnLight}>Shop the Collection</Link>
-            <Link href="/contact" className={styles.btnOutline}>Say Hello</Link>
+            <Link href="/contact" className={styles.btnLight}>Get a Free Quote</Link>
+            <Link href="/services" className={styles.btnGhost}>Explore Services</Link>
           </div>
         </div>
       </section>
