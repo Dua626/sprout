@@ -18,25 +18,25 @@ const tabs = [
         name: 'Lab Coats',
         desc: 'Full and half-length, standard white or custom colour, with embroidery options.',
         images: [
-          '/images/products/lab-coat-1.png',
-          '/images/products/lab-coat-2.png',
+          '/images/products/lab-coat-1.webp',
+          '/images/products/lab-coat-2.webp',
         ],
       },
       {
         name: 'Patient Gowns',
         desc: 'Soft, dignified, easy-access gowns designed for patient comfort and clinical practicality.',
         images: [
-          '/images/products/patient-gown-1.png',
-          '/images/products/patient-gown-2.png',
-          '/images/products/patient-gown-3.png',
+          '/images/products/patient-gown-1.webp',
+          '/images/products/patient-gown-2.webp',
+          '/images/products/patient-gown-3.webp',
         ],
       },
       {
         name: 'Hospital Bed Linen',
         desc: 'Durable, hygienic bed linen for wards, OPDs, and clinical settings — supplied in bulk.',
         images: [
-          '/images/products/hospital-linen-1.png',
-          '/images/products/hospital-linen-2.png',
+          '/images/products/hospital-linen-1.webp',
+          '/images/products/hospital-linen-2.webp',
         ],
       },
     ],
@@ -53,24 +53,24 @@ const tabs = [
         name: 'Hotel Staff Uniforms',
         desc: 'Front desk, concierge, and F&B uniforms tailored to your brand palette and standards.',
         images: [
-          '/images/products/hotel-staff-1.png',
-          '/images/products/hotel-staff-2.png',
+          '/images/products/hotel-staff-1.webp',
+          '/images/products/hotel-staff-2.webp',
         ],
       },
       {
         name: 'Housekeeping Uniforms',
         desc: 'Practical, presentable uniforms built for movement and durability across daily operations.',
         images: [
-          '/images/products/housekeeping-1.png',
-          '/images/products/housekeeping-2.png',
+          '/images/products/housekeeping-1.webp',
+          '/images/products/housekeeping-2.webp',
         ],
       },
       {
         name: 'Bed Linen & Covers',
         desc: 'Premium hotel-grade bed linen and duvet covers, supplied in consistent bulk quantities.',
         images: [
-          '/images/products/hotel-linen-1.png',
-          '/images/products/hotel-linen-2.png',
+          '/images/products/hotel-linen-1.webp',
+          '/images/products/hotel-linen-2.webp',
         ],
       },
     ],
@@ -87,26 +87,26 @@ const tabs = [
         name: 'School Uniforms',
         desc: 'Full sets including shirts, trousers, skirts, and accessories — custom to your specifications.',
         images: [
-          '/images/products/school-uniform-1.png',
-          '/images/products/school-uniform-2.png',
-          '/images/products/school-uniform-3.png',
+          '/images/products/school-uniform-1.webp',
+          '/images/products/school-uniform-2.webp',
+          '/images/products/school-uniform-3.webp',
         ],
       },
       {
         name: 'Custom Colours & Piping',
         desc: 'Precise colour matching and piping details that distinguish your institution\'s identity.',
         images: [
-          '/images/products/custom-piping-1.png',
-          '/images/products/custom-piping-2.png',
+          '/images/products/custom-piping-1.webp',
+          '/images/products/custom-piping-2.webp',
         ],
       },
       {
         name: 'Bulk Orders',
         desc: 'Scalable supply for entire student bodies, with consistent sizing and on-time delivery.',
         images: [
-          '/images/products/bulk-order-1.png',
-          '/images/products/bulk-order-2.png',
-          '/images/products/bulk-order-3.png',
+          '/images/products/bulk-order-1.webp',
+          '/images/products/bulk-order-2.webp',
+          '/images/products/bulk-order-3.webp',
         ],
       },
     ],
@@ -213,7 +213,7 @@ export default function ServicesPage() {
       {/* ── PAGE HERO ── */}
       <div
         className={styles.pageHero}
-        style={{ backgroundImage: 'url(/images/bg/services-hero.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/services-hero.webp)' }}
       >
         <div className={styles.heroOverlay} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>

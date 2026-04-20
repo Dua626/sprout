@@ -65,7 +65,7 @@ export default function HomePage() {
 
         <div className={styles.heroRight}>
           <Image
-            src="/images/hero.png"
+            src="/images/hero.webp"
             alt="Sprout uniform solutions"
             fill
             priority
@@ -120,7 +120,7 @@ export default function HomePage() {
       {/* ── WHY SPROUT ── */}
       <section
         className={styles.whySection}
-        style={{ backgroundImage: 'url(/images/bg/home-why.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/home-why.webp)' }}
       >
         <div className={styles.whyOverlay} />
         <div className={`container ${styles.whyInner}`}>
@@ -188,7 +188,7 @@ export default function HomePage() {
       {/* ── CTA BANNER ── */}
       <section
         className={styles.ctaSection}
-        style={{ backgroundImage: 'url(/images/bg/home-cta.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/home-cta.webp)' }}
       >
         <div className={styles.ctaOverlay} />
         <div className={`container ${styles.ctaInner}`}>

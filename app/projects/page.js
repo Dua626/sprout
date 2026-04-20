@@ -13,7 +13,7 @@ const projects = [
     description: 'Custom piping, bulk production for the full student body — delivered ahead of the academic term.',
     category: 'Education',
     tags: ['School Uniforms', 'Bulk Order', 'Custom Colours'],
-    image: '/images/projects/sos-school.png',
+    image: '/images/projects/sos-school.webp',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projects = [
     description: 'Durable charcoal grey workwear for a demanding operational environment — consistent across the full order.',
     category: 'Industrial',
     tags: ['Workwear', 'Industrial', 'Bulk Order'],
-    image: '/images/projects/trade-tacts.png',
+    image: '/images/projects/trade-tacts.webp',
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projects = [
     description: 'Warm skin-tone base with brown piping — a refined identity across multiple campuses.',
     category: 'Education',
     tags: ['School Uniforms', 'Custom Piping', 'Multi-Campus'],
-    image: '/images/projects/iqra-schools.png',
+    image: '/images/projects/iqra-schools.webp',
   },
 ];
 
@@ -50,7 +50,7 @@ export default function ProjectsPage() {
       {/* ── PAGE HERO ── */}
       <div
         className={styles.pageHero}
-        style={{ backgroundImage: 'url(/images/bg/projects-hero.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/projects-hero.webp)' }}
       >
         <div className={styles.heroOverlay} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>

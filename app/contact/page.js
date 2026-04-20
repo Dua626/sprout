@@ -127,7 +127,7 @@ export default function ContactPage() {
       {/* ── PAGE HERO ── */}
       <div
         className={styles.pageHero}
-        style={{ backgroundImage: 'url(/images/bg/contact-hero.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/contact-hero.webp)' }}
       >
         <div className={styles.heroOverlay} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>

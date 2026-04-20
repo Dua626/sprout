@@ -33,7 +33,7 @@ export default function AboutPage() {
       {/* ── PAGE HERO ── */}
       <div
         className={styles.pageHero}
-        style={{ backgroundImage: 'url(/images/bg/about-hero.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/about-hero.webp)' }}
       >
         <div className={styles.heroOverlay} />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className={styles.storyGrid}>
             <div className={styles.storyImgWrap}>
               <Image
-                src="/images/about.png"
+                src="/images/about.webp"
                 alt="Ubaida Faiz — Founder of Sprout"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -78,7 +78,7 @@ export default function AboutPage() {
       {/* ── SPROUT ACRONYM ── */}
       <section
         className={styles.acronymSection}
-        style={{ backgroundImage: 'url(/images/bg/about-acronym.png)' }}
+        style={{ backgroundImage: 'url(/images/bg/about-acronym.webp)' }}
       >
         <div className={styles.acronymOverlay} />
         <div className={`container ${styles.acronymInner}`}>
