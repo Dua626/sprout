@@ -273,6 +273,18 @@
   letter-spacing: 0.18em;
 }
 
+.industryItems li:last-child {
+  font-style: italic;
+  color: var(--text-muted);
+  opacity: 0.6;
+  font-size: 13px;
+  padding-left: 0;
+}
+
+.industryItems li:last-child::before {
+  display: none;
+}
+
 /* ── WHY SPROUT ── */
 .whySection {
   padding: 100px 0;

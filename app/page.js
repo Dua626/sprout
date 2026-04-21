@@ -7,10 +7,10 @@ import {
 } from './components/Icons';
 
 const industries = [
-  { Icon: IconHealthcare,  title: 'Healthcare',  items: ['Lab Coats', 'Patient Gowns', 'Hospital Bed Linen'] },
-  { Icon: IconHospitality, title: 'Hospitality', items: ['Hotel Staff Uniforms', 'Housekeeping Uniforms', 'Bed Linen & Covers'] },
-  { Icon: IconEducation,   title: 'Education',   items: ['School Uniforms', 'Custom Colours & Piping', 'Teacher\'s Gown'] },
-  { Icon: IconIndustrial,  title: 'Industries',  items: ['Industrial Uniforms', 'Bulk Orders'] },
+  { Icon: IconHealthcare,  title: 'Healthcare',  items: ['Lab Coats', 'Patient Gowns', 'Hospital Bed Linen', 'OT Gowns', 'Dr Coats', 'and more...'] },
+  { Icon: IconHospitality, title: 'Hospitality', items: ['Hotel Staff Uniforms', 'Housekeeping Uniforms', 'Bed Linen & Covers', 'Chef Uniforms', 'and more...'] },
+  { Icon: IconEducation,   title: 'Education',   items: ['School Uniforms', 'Custom Colours & Piping', 'Teacher\'s Gown', 'Sports Kits', 'and more...'] },
+  { Icon: IconIndustrial,  title: 'Industrial',  items: ['Industrial Uniforms', 'Bulk Orders', 'Safety Vests & Hi-Vis Wear', 'Maintenance Coveralls', 'and more...'] },
 ];
 
 const whySprout = [
@@ -59,7 +59,7 @@ export default function HomePage() {
             From design to delivery, we partner with businesses across Pakistan to create uniforms that reflect their brand, support their teams, and simplify their operations.
           </p>
           <div className={`${styles.heroActions} fade-up fade-up-delay-3`}>
-            <Link href="/contact" className={styles.btnGold}>Get a Free Quote</Link>
+            <Link href="/contact" className={styles.btnGold}>Get a Custom Quote</Link>
             <Link href="/projects" className={styles.btnOutline}>View Our Work</Link>
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function HomePage() {
           <h2>Let&rsquo;s outfit <em>your team</em></h2>
           <p>Whether you need 50 uniforms or 5,000 — Sprout is built for your scale.</p>
           <div className={styles.ctaActions}>
-            <Link href="/contact" className={styles.btnLight}>Get a Free Quote</Link>
+            <Link href="/contact" className={styles.btnLight}>Get a Custom Quote</Link>
             <Link href="/services" className={styles.btnGhost}>Explore Services</Link>
           </div>
         </div>
