@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './services.module.css';
-import { IconHealthcare, IconHospitality, IconEducation } from '../components/Icons';
+import { IconHealthcare, IconHospitality, IconEducation, IconIndustrial } from '../components/Icons';
 
 const tabs = [
   {
@@ -101,8 +101,36 @@ const tabs = [
         ],
       },
       {
+        name: 'Teacher\'s Gown',
+        desc: 'Dignified, professional gowns for academic staff — available in custom colours and sizes.',
+        images: [
+          '/images/products/t-gown-1.webp',
+          '/images/products/t-gown-2.webp',
+        ],
+      },
+    ],
+  },
+  {
+    id: 'industrial',
+    Icon: IconIndustrial,
+    label: 'Industries',
+    title: 'Industrial Uniforms',
+    tagline: 'Built tough. Worn with pride.',
+    description: 'We supply durable workwear for industrial and operational environments — designed for safety, comfort, and consistency across large teams.',
+    products: [
+      {
+        name: 'Industrial Uniforms',
+        desc: 'Heavy-duty uniforms built for demanding environments — consistent quality across bulk orders.',
+        images: [
+          '/images/products/industrial-1.webp',
+          '/images/products/industrial-2.webp',
+          '/images/products/industrial-3.webp',
+          '/images/products/industrial-4.webp',
+        ],
+      },
+      {
         name: 'Bulk Orders',
-        desc: 'Scalable supply for entire student bodies, with consistent sizing and on-time delivery.',
+        desc: 'Scalable supply for large workforces — consistent sizing, quality, and on-time delivery.',
         images: [
           '/images/products/bulk-order-1.webp',
           '/images/products/bulk-order-2.webp',
@@ -221,7 +249,7 @@ export default function ServicesPage() {
             What We Offer
           </p>
           <h1>Uniform Solutions<br /><em>Built for Your Sector</em></h1>
-          <p>From clinical wards to hotel lobbies to school hallways — every uniform is crafted with purpose.</p>
+          <p>From clinical wards to hotel lobbies, school hallways to factory floors — every uniform is crafted with purpose.</p>
         </div>
       </div>
 

@@ -2,14 +2,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './page.module.css';
 import {
-  IconHealthcare, IconHospitality, IconEducation,
+  IconHealthcare, IconHospitality, IconEducation, IconIndustrial,
   IconFabric, IconCustomize, IconBulk, IconDelivery,
 } from './components/Icons';
 
 const industries = [
-  { Icon: IconHealthcare, title: 'Healthcare',   items: ['Lab Coats', 'Patient Gowns', 'Hospital Bed Linen'] },
+  { Icon: IconHealthcare,  title: 'Healthcare',  items: ['Lab Coats', 'Patient Gowns', 'Hospital Bed Linen'] },
   { Icon: IconHospitality, title: 'Hospitality', items: ['Hotel Staff Uniforms', 'Housekeeping Uniforms', 'Bed Linen & Covers'] },
-  { Icon: IconEducation,  title: 'Education',    items: ['School Uniforms', 'Custom Colours & Piping', 'Bulk Orders'] },
+  { Icon: IconEducation,   title: 'Education',   items: ['School Uniforms', 'Custom Colours & Piping', 'Teacher\'s Gown'] },
+  { Icon: IconIndustrial,  title: 'Industries',  items: ['Industrial Uniforms', 'Bulk Orders'] },
 ];
 
 const whySprout = [
@@ -48,14 +49,14 @@ export default function HomePage() {
       <section className={styles.hero}>
         <div className={styles.heroLeft}>
           <p className={`${styles.heroLabel} section-label fade-up`}>
-            B2B Uniform Solutions — Lahore, Pakistan
+            Tailored solutions for your business — a partner you can trust
           </p>
           <h1 className={`${styles.heroTitle} fade-up fade-up-delay-1`}>
             Uniform &amp; Linen Solutions<br />
             <em>for Every Sector</em>
           </h1>
           <p className={`${styles.heroSub} fade-up fade-up-delay-2`}>
-            We don&rsquo;t just stitch uniforms — we design confidence, identity, and functionality for your workforce.
+            From design to delivery, we partner with businesses across Pakistan to create uniforms that reflect their brand, support their teams, and simplify their operations.
           </p>
           <div className={`${styles.heroActions} fade-up fade-up-delay-3`}>
             <Link href="/contact" className={styles.btnGold}>Get a Free Quote</Link>
@@ -99,8 +100,8 @@ export default function HomePage() {
       <section className={styles.industriesSection}>
         <div className="container">
           <div className={styles.sectionHead}>
-            <p className="section-label">What We Cover</p>
-            <h2>Industries <em>We Serve</em></h2>
+            <p className="section-label">Industries</p>
+            <h2><em>We Serve</em></h2>
           </div>
           <div className={styles.industriesGrid}>
             {industries.map(({ Icon, title, items }) => (
@@ -110,7 +111,7 @@ export default function HomePage() {
                 <ul className={styles.industryItems}>
                   {items.map((item) => <li key={item}>{item}</li>)}
                 </ul>
-                <Link href="/services" className={styles.industryLink}>View Services →</Link>
+                <Link href={`/services#${title.toLowerCase()}`} className={styles.industryLink}>View Services →</Link>
               </div>
             ))}
           </div>

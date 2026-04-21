@@ -92,3 +92,13 @@ export function IconPurpose({ className }) {
     </svg>
   );
 }
+
+export function IconIndustrial({ className }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M2 20h20"/>
+      <path d="M2 20V10l6-6 4 4 4-6 6 8v10"/>
+      <path d="M10 20v-5h4v5"/>
+    </svg>
+  );
+}

@@ -4,15 +4,15 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 export const metadata = {
-  title: 'Sprout — Uniform & Linen Solutions',
-  description: 'Sprout provides premium B2B uniform and linen solutions for healthcare, hospitality, and education sectors across Pakistan.',
+  title: 'Sprout — Stitching Stories',
+  description: 'Tailored solutions for your business — a partner you can trust. B2B uniform and linen solutions for healthcare, hospitality, education, and industry across Pakistan.',
   icons: {
     icon: '/images/logosprout.jpeg',
     apple: '/images/logosprout.jpeg',
   },
   openGraph: {
-    title: 'Sprout — Uniform & Linen Solutions',
-    description: 'We don\'t just stitch uniforms — we design confidence, identity, and functionality for your workforce.',
+    title: 'Sprout — Stitching Stories',
+    description: 'From design to delivery, we partner with businesses across Pakistan to create uniforms that reflect their brand, support their teams, and simplify their operations.',
     images: [{ url: '/images/logosprout.jpeg' }],
   },
 };

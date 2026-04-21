@@ -187,7 +187,7 @@
 
 .industriesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -636,6 +636,7 @@
   .whyGrid    { grid-template-columns: repeat(2, 1fr); }
   .processGrid { grid-template-columns: repeat(2, 1fr); }
   .processArrow { display: none; }
+  .industriesGrid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
