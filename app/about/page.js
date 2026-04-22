@@ -60,7 +60,7 @@ export default function AboutPage() {
             <div className={styles.storyContent}>
               <p className="section-label" style={{ marginBottom: '24px' }}>The Founder</p>
               <h2>Ubaida Faiz</h2>
-              <p className={styles.founderRole}>Founder &amp; Director, Sprout</p>
+              <p className={styles.founderRole}>Founder &amp; CEO, Sprout</p>
               <p>
                 Ubaida Faiz founded Sprout in 2022 with a clear vision: to build a uniform solutions business that combines professional quality with genuine social purpose. With a background in HR and operations, she understood firsthand what institutions need from a reliable uniform supplier — consistency, customisation, and accountability.
               </p>
