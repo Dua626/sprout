@@ -304,8 +304,8 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .storyGrid { grid-template-columns: 1fr; gap: 40px; }
-  .storyImgWrap { aspect-ratio: 16/9; }
+  .storyGrid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .storyImgWrap { aspect-ratio: 3/4; }
   .acronymGrid { grid-template-columns: repeat(3, 1fr); }
   .valuesGrid  { grid-template-columns: repeat(2, 1fr); }
   .storySection,
@@ -322,4 +322,9 @@
   .storySection,
   .acronymSection,
   .valuesSection { padding: 56px 0; }
+  .storyGrid { grid-template-columns: 2fr 3fr; gap: 20px; align-items: start; }
+  .storyImgWrap { aspect-ratio: 3/4; }
+  .storyContent h2 { font-size: 22px; }
+  .storyContent p { font-size: 13px; line-height: 1.7; }
+  .founderRole { font-size: 11px; margin-bottom: 14px; }
 }
