@@ -40,10 +40,11 @@ function IconClock() {
   );
 }
 
-// Inner form component that uses useSearchParams
 function ContactForm() {
   const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({
     name: '', organisation: '', phone: '', industry: '', message: '',
   });
@@ -62,9 +63,31 @@ function ContactForm() {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || 'Something went wrong. Please try again.');
+        return;
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -113,8 +136,15 @@ function ContactForm() {
         <textarea id="message" name="message" required className={`${styles.input} ${styles.textarea}`} placeholder="Tell us about your uniform requirements — quantities, sector, timeline..." value={form.message} onChange={handleChange} rows={5} />
       </div>
 
-      <button type="submit" className={styles.submitBtn}>
-        Send Message →
+      {error && (
+        <p style={{ color: '#c0392b', fontSize: '13px', margin: '0' }}>
+          {error}
+        </p>
+      )}
+
+      <button type="submit" className={styles.submitBtn} disabled={loading}
+        style={{ opacity: loading ? 0.7 : 1, cursor: loading ? 'not-allowed' : 'pointer' }}>
+        {loading ? 'Sending…' : 'Send Message →'}
       </button>
     </form>
   );
@@ -160,7 +190,7 @@ export default function ContactPage() {
                 <span className={styles.infoIconWrap}><IconMail /></span>
                 <div>
                   <span className={styles.infoLabel}>Email</span>
-                  <a href="mailto:hello@sprout.pk" className={styles.infoValue}>hello@sprout.pk</a>
+                  <a href="mailto:career@letssprouts.com" className={styles.infoValue}>career@letssprouts.com</a>
                 </div>
               </div>
 
