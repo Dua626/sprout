@@ -122,7 +122,7 @@ export default function TermsPage() {
             <p>For any questions regarding these terms:</p>
             <ul>
               <li>Email: hello@sprout.pk</li>
-              <li>Phone / WhatsApp: +92 321 718 3981</li>
+              <li>Phone / WhatsApp: +92 349 490 1682</li>
               <li>Location: Lahore, Pakistan</li>
             </ul>
           </div>

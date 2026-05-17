@@ -61,7 +61,7 @@ export default function Footer() {
           </ul>
           <p className={styles.colTitle} style={{ marginTop: '28px' }}>Contact</p>
           <ul className={styles.colLinks}>
-            <li><a href="tel:+923247183981">+92 324 718 3981</a></li>
+            <li><a href="tel:+923494901682">+92 349 490 1682</a></li>
             <li><a href="mailto:hello@sprout.pk">hello@sprout.pk</a></li>
             <li><span>Lahore, Pakistan</span></li>
           </ul>

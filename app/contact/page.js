@@ -152,7 +152,7 @@ export default function ContactPage() {
                 <span className={styles.infoIconWrap}><IconPhone /></span>
                 <div>
                   <span className={styles.infoLabel}>Phone</span>
-                  <a href="tel:+923247183981" className={styles.infoValue}>+92 324 718 3981</a>
+                  <a href="tel:+923494901682" className={styles.infoValue}>+92 349 490 1682</a>
                 </div>
               </div>
 
@@ -181,7 +181,7 @@ export default function ContactPage() {
               </div>
 
               <a
-                href="https://wa.me/923247183981"
+                href="https://wa.me/923494901682"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.waLink}

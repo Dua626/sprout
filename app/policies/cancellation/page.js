@@ -112,7 +112,7 @@ export default function CancellationPage() {
             <p>All cancellation requests and quality complaints must be submitted in writing to:</p>
             <ul>
               <li>Email: hello@sprout.pk</li>
-              <li>WhatsApp: +92 321 718 3981</li>
+              <li>WhatsApp: +92 349 490 1682</li>
             </ul>
             <p>
               Verbal requests are not accepted and will not be acted upon. A written reference number will be issued upon receipt of your written request.

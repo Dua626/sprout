@@ -80,7 +80,7 @@ export default function PrivacyPage() {
               <li>Request deletion of your data, subject to legal obligations</li>
               <li>Withdraw consent for any non-essential use of your data</li>
             </ul>
-            <p>To exercise any of these rights, contact us at <strong>hello@sprout.pk</strong> or via WhatsApp at +92 321 718 3981.</p>
+            <p>To exercise any of these rights, contact us at <strong>hello@sprout.pk</strong> or via WhatsApp at +92 3494901682.</p>
           </div>
 
           <div className={styles.section}>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
             </p>
             <ul>
               <li>Email: hello@sprout.pk</li>
-              <li>Phone / WhatsApp: +92 321 718 3981</li>
+              <li>Phone / WhatsApp: +92 349 490 1682</li>
               <li>Location: Lahore, Pakistan</li>
             </ul>
           </div>
